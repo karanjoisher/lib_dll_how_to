@@ -1,0 +1,8 @@
+LIBRARY vectors
+EXPORTS 
+	Normalize
+	Print
+	PrintOneTwoThree
+
+	
+

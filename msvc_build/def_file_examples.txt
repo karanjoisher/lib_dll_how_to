@@ -1,0 +1,21 @@
+LIBRARY vectors
+EXPORTS 
+	NormalizeV3=?Normalize@@YA?AUv3@@U1@@Z
+	PrintV3=?Print@@YAXUv3@@@Z
+	PrintOneTwoThree=?PrintOneTwoThree@@YAXXZ
+
+
+___________________________________________________________
+
+The names are mangled even when extern "C" was specified due 
+to the __stdcall convention. This can be resolved using the 
+def file as follows:
+
+LIBRARY vectors
+EXPORTS
+	Normalize=_Normalize@12	
+	Print=_Print@12		
+	PrintOneTwoThree_PrintOneTwoThree@0	
+
+
+
